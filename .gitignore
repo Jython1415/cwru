@@ -1,0 +1,4 @@
+.* # ignore hidden files
+.~lock.*#
+!.gitignore # track gitignore
+
