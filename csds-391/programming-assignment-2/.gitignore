@@ -1,0 +1,5 @@
+csds391-pa2.code-workspace
+.DS_Store
+.vscode/settings.json
+__pycache__/*.pyc
+__pychache__
