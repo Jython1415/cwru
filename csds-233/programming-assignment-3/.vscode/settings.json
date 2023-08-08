@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/Joshua/Documents/_Hobbies/_Programming/_Libraries/Java/junit/hamcrest-core-1.3.jar",
+        "/Users/Joshua/Documents/_Hobbies/_Programming/_Libraries/Java/junit/junit-4.13.2.jar"
+    ],
+    "cSpell.words": [
+        "Inorder"
+    ]
+}
