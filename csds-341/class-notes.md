@@ -31,3 +31,12 @@ enables concurrent access, and resolves security problems.
   among the data.
   - **View level** is where application programs hide details of data types.
   Views can also hide information for security purposes.
+- **Logical schema** is the overall logical structure of the database.
+- **Physical schema** is hte overall physical structure of the database.
+- An **instance** is the actual content of the database at a particular point in
+time.
+- **Physical data independence** is the ability to modify the physical schema
+without changing the logical schema. In general, the interfaces between the
+various levels and components should be well defined so that changes in some
+parts do not comprise other parts.
+- **SQL** stands for Structured Query Language.
