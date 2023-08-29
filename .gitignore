@@ -1,4 +1,10 @@
+# LibreOffice
 .* # ignore hidden files
 .~lock.*#
+
+# PDF
+*.pdf
+
+# Tracking override
 !.gitignore # track gitignore
 
