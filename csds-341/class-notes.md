@@ -40,3 +40,8 @@ without changing the logical schema. In general, the interfaces between the
 various levels and components should be well defined so that changes in some
 parts do not comprise other parts.
 - **SQL** stands for Structured Query Language.
+  - Consists of **Data Definition Language (DDL)** and **Data Manipulation**
+  **Language (DML)**.
+- SQL queries take tables and input and returns a table as output.
+- *DDL* is used to define the database structure or schema.
+- *DML* is used to retrieve, insert, delete, and modify data.
