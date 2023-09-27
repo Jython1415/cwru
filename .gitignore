@@ -1,6 +1,7 @@
 # LibreOffice
 .* # ignore hidden files
 .~lock.*#
+**/.*/**
 
 # PDF
 *.pdf
