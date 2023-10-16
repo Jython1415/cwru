@@ -27,6 +27,8 @@ def validate_traffic_status(traffic_status) -> bool:
 
     if len(traffic_status) != 4:
         return False
+    if "P" in traffic_status.values():
+        return len(set(traffic_status.values())) == 1
     if not all([i in traffic_status for i in ["north", "south", "west", "east"]]):
         return False
     if not all([i in ["R", "Y", "G"] for i in traffic_status.values()]):
@@ -42,8 +44,11 @@ traffic_cycle = [
     ({"north": "R", "south": "R", "west": "G", "east": "G"}, 6),
     ({"north": "R", "south": "R", "west": "Y", "east": "Y"}, 2),
     ({"north": "R", "south": "R", "west": "R", "east": "R"}, 2),
-    ({"north": "G", "south": "G", "west": "R", "east": "R"}, 7),
+    ({"north": "G", "south": "G", "west": "R", "east": "R"}, 6),
     ({"north": "Y", "south": "Y", "west": "R", "east": "R"}, 2),
+    ({"north": "R", "south": "R", "west": "R", "east": "R"}, 2),
+    ({"north": "P", "south": "P", "west": "P", "east": "P"}, 6),
+    ({"north": "Y", "south": "Y", "west": "Y", "east": "Y"}, 2),
 ]
 
 

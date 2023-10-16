@@ -15,7 +15,12 @@ from main import validate_traffic_status
     ({"north": "R", "south": "G", "west": "R", "east": "G"}, False),
     ({"north": "Y", "south": "Y", "west": "Y", "east": "Y"}, False),
     ({"north": "G", "south": "G", "west": "G", "east": "G"}, False),
+    ({"north": "P", "south": "P", "west": "P", "east": "P"}, True),
+    ({"north": "P", "south": "G", "west": "G", "east": "G"}, False),
+    ({"north": "G", "south": "P", "west": "G", "east": "G"}, False),
+    ({"north": "G", "south": "G", "west": "P", "east": "G"}, False),
+    ({"north": "G", "south": "G", "west": "G", "east": "P"}, False),
 ])
-def test_validate_traffic_status(status, expected) -> None:
+def test_validate_traffic_status(status: dict[str, str], expected: bool) -> None:
     """Tests the validate_traffic_status function"""
     assert validate_traffic_status(status) == expected
