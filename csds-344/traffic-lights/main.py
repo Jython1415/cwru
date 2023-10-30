@@ -38,7 +38,6 @@ def validate_traffic_status(traffic_status) -> bool:
             return False
     return True
 
-
 traffic_cycle = [
     ({"north": "R", "south": "R", "west": "R", "east": "R"}, 2),
     ({"north": "R", "south": "R", "west": "G", "east": "G"}, 6),
@@ -83,6 +82,8 @@ def main(stdscr) -> None:
             start_time = current_time
             if not validate_traffic_status(traffic_status):
                 raise ValueError(f"Invalid traffic status: {traffic_status}")
+                # you can imagine that this error is caught by an external
+                # system to be dealt with appropriately
             update = True
 
         if update or current_time - last_update >= 0.1:
